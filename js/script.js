@@ -277,7 +277,7 @@ $(document).ready(function () {
     dots: true,
     slidesToShow: 3,
     slideToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     appendDots: $(".home-banner .custom-pagination-banner .custom-dots"),
     prevArrow: $(".home-banner .custom-pagination-banner .custom-prev"),
@@ -313,7 +313,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slideToScroll: 1,
     variableWidth: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
   });
 
@@ -327,7 +327,7 @@ $(document).ready(function () {
     nextArrow: "",
     slidesToShow: 7,
     slideToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     centerMode: true,
     centerPadding: 0,
     autoplaySpeed: 2000,
