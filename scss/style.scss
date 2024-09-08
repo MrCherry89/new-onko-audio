@@ -1206,6 +1206,9 @@
         transform: translateX(-50%);
         height: 63px;
         z-index: 1;
+        @media (max-width: 767px) {
+          left: 51.2%;
+        }
       }
       .slider-progress {
         position: absolute;
@@ -1293,7 +1296,7 @@
       @include align-center;
       cursor: pointer;
       @media (max-width: 767px) {
-        padding: 20px 30px;
+        padding: 20px 50px;
         min-height: 140px;
       }
       &.slick-center {

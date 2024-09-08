@@ -2550,6 +2550,11 @@ main {
   height: 63px;
   z-index: 1;
 }
+@media (max-width: 767px) {
+  .home-banner .wrapper .custom-pagination-banner:before {
+    left: 51.2%;
+  }
+}
 .home-banner .wrapper .custom-pagination-banner .slider-progress {
   position: absolute;
   top: -3px;
@@ -2642,7 +2647,7 @@ main {
 }
 @media (max-width: 767px) {
   .home-banner .slider-nav-banner .item {
-    padding: 20px 30px;
+    padding: 20px 50px;
     min-height: 140px;
   }
 }
