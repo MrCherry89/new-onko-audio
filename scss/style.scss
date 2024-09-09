@@ -1206,9 +1206,6 @@
         transform: translateX(-50%);
         height: 63px;
         z-index: 1;
-        @media (max-width: 767px) {
-          left: 51.2%;
-        }
       }
       .slider-progress {
         position: absolute;
