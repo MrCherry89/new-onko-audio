@@ -882,6 +882,26 @@ main {
   text-align: center;
   width: 50px;
   margin: 0 5px;
+  position: relative;
+}
+.slider-num-banner .item:after {
+  content: "";
+  width: 360px;
+  height: 33px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/pag-style.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .slider-num-banner .item:after {
+    content: none;
+  }
 }
 @media (max-width: 767px) {
   .slider-num-banner .item {
@@ -900,17 +920,19 @@ main {
   z-index: 10;
   width: 78px;
   height: 360px;
+  overflow: hidden;
 }
 .slider-vert-banner-wrap:after {
   content: "";
-  background: url(../img/pag-bg.svg);
+  background: url(../img/vert-style.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
-  height: 100%;
-  top: -4px;
-  left: 0px;
+  width: 78px;
+  height: 20px;
+  top: 49%;
+  margin-top: -10px;
+  left: 0;
   position: absolute;
 }
 @media (max-width: 1750px) {
@@ -941,6 +963,19 @@ main {
   font-weight: 500;
   text-align: center;
   height: 55px !important;
+  position: relative;
+}
+.slider-vert-banner .slick-slide:after {
+  content: "";
+  background: url(../img/pag-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 30px;
+  height: 64px;
+  top: -131px;
+  left: 18px;
+  position: absolute;
 }
 
 .slider-vert-banner .slick-current {
@@ -2569,25 +2604,6 @@ main {
 @media (max-width: 767px) {
   .home-banner .wrapper .custom-pagination-banner {
     padding: 15px 0;
-  }
-}
-.home-banner .wrapper .custom-pagination-banner:after {
-  content: "";
-  width: 360px;
-  height: 33px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: url(../img/pag-style.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: -1;
-}
-@media (max-width: 767px) {
-  .home-banner .wrapper .custom-pagination-banner:after {
-    content: none;
   }
 }
 .home-banner .wrapper .custom-pagination-banner .decor {
