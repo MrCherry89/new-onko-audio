@@ -674,7 +674,7 @@ main {
   margin: 0 auto;
   margin-bottom: 0 !important;
   margin-top: -7px;
-
+  position: relative;
   @media (max-width: 767px) {
     max-width: 290px;
   }
@@ -721,7 +721,7 @@ main {
   right: 30px;
   z-index: 10;
   width: 78px;
-  height: 360px;
+  height: 200px;
   overflow: hidden;
   &:after {
     content: "";
@@ -731,7 +731,7 @@ main {
     background-position: center center;
     width: 78px;
     height: 20px;
-    top: 49%;
+    top: 48.5%;
     margin-top: -10px;
     left: 0;
     position: absolute;
@@ -751,7 +751,7 @@ main {
 .slider-vert-banner .slick-track {
   display: block !important;
   position: relative;
-  top: 110px;
+  top: 30px;
   left: 0;
 }
 
@@ -813,4 +813,47 @@ main {
       }
     }
   }
+}
+
+.drop-menu {
+  @include dir-col;
+  @include justify-center;
+  cursor: pointer;
+  display: none;
+  border: 1px solid $red;
+  width: 50px;
+  height: 50px;
+
+  @media (max-width: 1401px) {
+    @include flex;
+  }
+
+  .line {
+    width: 30px;
+    height: 2px;
+    background-color: $red;
+    display: block;
+    margin: 4px auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.drop-menu.is-active .line:nth-child(3) {
+  opacity: 0;
+}
+
+.drop-menu.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(47deg);
+  -ms-transform: translateY(12px) rotate(47deg);
+  -o-transform: translateY(12px) rotate(47deg);
+  transform: translateY(12px) rotate(47deg);
+}
+
+.drop-menu.is-active .line:nth-child(2) {
+  -webkit-transform: translateY(1px) rotate(-45deg);
+  -ms-transform: translateY(1px) rotate(-45deg);
+  -o-transform: translateY(1px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
 }

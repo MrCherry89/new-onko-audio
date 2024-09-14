@@ -325,7 +325,7 @@ $(document).ready(function () {
     // focusOnSelect: true,
     prevArrow: "",
     nextArrow: "",
-    slidesToShow: 7,
+    slidesToShow: 4,
     slideToScroll: 1,
     autoplay: true,
     centerMode: true,
@@ -387,5 +387,11 @@ $(document).ready(function () {
 
   $(".search-form").on("click", function (e) {
     e.stopPropagation();
+  });
+
+  $(".drop-menu").click(function () {
+    $(this).toggleClass("is-active");
+    $(".mobile-menu").toggleClass("open");
+    $("body, html").toggleClass("overflow");
   });
 });
