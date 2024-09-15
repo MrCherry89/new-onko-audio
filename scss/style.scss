@@ -1966,15 +1966,14 @@
     }
     .mobile-menu {
       position: absolute;
-      top: 90px;
+      top: 0;
       left: 0;
       width: 100%;
       z-index: 100;
-      height: calc(100vh - 90px);
+      height: 100vh;
       overflow-y: auto;
-      background: rgba(black, 0.9);
+      background: black;
       padding: 20px;
-
       @include dir-col;
       visibility: hidden;
       opacity: 0;
@@ -1988,6 +1987,37 @@
       }
       @media (max-width: 1400px) {
         @include flex;
+      }
+      .top {
+        @include flex;
+        @include align-center;
+        @media (max-width: 767px) {
+          @include justify-between;
+        }
+        .dealer {
+          @include flex;
+          @include align-center;
+          @include dir-col;
+          color: white;
+          text-align: center;
+          margin: 0 30px;
+          @media (max-width: 767px) {
+            margin: 0 15px;
+          }
+          img {
+            margin-top: 8px;
+          }
+        }
+        .lang {
+          position: static;
+          @include flex;
+          transform: translateY(0);
+          margin-left: auto;
+          margin-right: 30px;
+          @media (max-width: 767px) {
+            display: none;
+          }
+        }
       }
       .bottom {
         margin-top: auto;
@@ -2036,10 +2066,13 @@
             @include justify-between;
           }
           .lang {
-            @include flex;
             position: static;
             transform: translateY(0);
             margin-left: 20px;
+            display: none;
+            @media (max-width: 767px) {
+              @include flex;
+            }
           }
         }
       }
@@ -2065,9 +2098,17 @@
         li {
           margin-top: 20px;
           margin-left: 0;
+          margin-right: 0;
           a {
             font-size: 18px;
             color: white;
+            @include flex;
+            @include justify-between;
+            @include align-center;
+            span {
+              color: #373737;
+              font-size: 18px;
+            }
           }
         }
       }

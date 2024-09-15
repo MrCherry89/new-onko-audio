@@ -390,8 +390,11 @@ $(document).ready(function () {
   });
 
   $(".drop-menu").click(function () {
-    $(this).toggleClass("is-active");
-    $(".mobile-menu").toggleClass("open");
-    $("body, html").toggleClass("overflow");
+    $(".mobile-menu").addClass("open");
+    $("body, html").addClass("overflow");
+  });
+  $(".close-menu").click(function () {
+    $(".mobile-menu").removeClass("open");
+    $("body, html").removeClass("overflow");
   });
 });
